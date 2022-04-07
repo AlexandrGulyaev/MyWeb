@@ -55,5 +55,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails', '~> 2.0.1'
 gem 'slim'
-gem 'slim-rails'
+gem 'slim-rails', '~> 3.3.0'
+gem 'activerecord-reset-pk-sequence'
+# Use ActiveModel has_secure_password
+
+gem 'bcrypt'
+gem 'active_model_serializers'
+
+
+
 
