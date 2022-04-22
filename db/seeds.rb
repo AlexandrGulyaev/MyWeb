@@ -36,7 +36,6 @@ Theme.create([
 User.delete_all
 User.reset_pk_sequence
 User.create([
-
               {name: "THRAWN", email: "thrawn@csilla.chiss"},
             ])
 
