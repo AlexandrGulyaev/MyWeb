@@ -1,22 +1,16 @@
-%h1 Header
-%ul
-  %li= link_to 'Main', main_index_path
-  %li= link_to 'Contacts', main_contacts_path
-  %li= link_to 'Help', main_help_path
-  %li= link_to 'About', main_about_path
-  %li= link_to 'Ruby on Rails Website', 'http://rubyonrails.org'
-
+//%h1 Header
 %nav
   %ul.nav.navbar-nav.pull-right
+    %li= link_to t('.main'), main_index_path
     %li= link_to t('.home'), main_index_path
     %li= link_to t('.help'), main_help_path
     - if signed_in?
+      %li= link_to "Users", '#'
       %li.logged
         #{current_user.email}
       = gravatar_for current_user
       %li
-        %a.dropdown-toggle{"data-toggle" => "dropdown",
- :href => "#"}
+        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
           %p
             = t('.person')
             %b.caret
@@ -25,7 +19,7 @@
           %li= link_to t('.settings'), '#'
           %li.divider
           %li
-            = link_to t('.sign_out'), signout_path, method: "delete"
+            = link_to t('.sign_out'), sign_out_path, method: "delete"
     - else
-      %li= link_to t('.sign_in'), signin_path
+      %li= link_to t('.sign_in'), sign_in_path
 

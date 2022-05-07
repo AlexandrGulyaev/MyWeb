@@ -12,4 +12,29 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+li{
+  font-size: 16px;
+}
+
+h1{
+  font-size: 21px;
+  text-align: left;
+  padding-left: 21px;
+};
+
+body{
+  background: #f1f1fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  header{
+    background: #d0d0ff;
+    color: #d0d0ff;
+  };
+};

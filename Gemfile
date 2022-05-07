@@ -57,10 +57,29 @@ gem 'haml-rails', '~> 2.0.1'
 gem 'slim'
 gem 'slim-rails', '~> 3.3.0'
 gem 'activerecord-reset-pk-sequence'
+gem 'jquery-ui-rails'
+gem 'rails-asset-jqueryui'
+gem 'bootstrap-sass', '>= 3.4.1'
+gem 'kaminari'
+# Icons fonts
+gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+
 # Use ActiveModel has_secure_password
 
 gem 'bcrypt'
 gem 'active_model_serializers'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
+
+  # Лучше отображает ошибки
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+
 
 
 
