@@ -1,36 +1,44 @@
 .image
   .row
-    .col-md-3
+    -# Кнопка выбора темы
+    .col-md-12{:style => "width: 800px; text-align:center;"}
+      .left_controls
+        .select_theme
+          = render 'work/button_theme_select', locale: @current_locale
+        %br
 
-.left_controls
-  .select_theme
-  = render 'work/button_theme_select', locale: @current_locale
-%br
+    .col-md-12{:style => "width: 800px; text-align:center;"}
+      .image_display
+        .row.image
+          -# Имя темы
+          .col-md-12
+            %h2.up-theme{:title => t('.theme_name')}
+              #{@selected_theme}
 
-.col-md-9
-  .image_display
-    .row.image
-      .col-md-12
-        %h2.up-theme{:title => "theme_name"}
-          #{@selected_theme}
-      .col-md-12
-        %h2.up{:title => "Image file name"}
-          #{@selected_image_name}
+          -# Кнопка перелистывание влево
+          .col-md-1
+            .img-left-side
+              %h3{:title => "list to previous image"}
+                %i.fa.fa-arrow-circle-left
 
-      .col-md-1
-        .img-left-side
-          %h3{:title => "list to previous image"}
-            %i.fa.fa-chevron-circle-left.strong
-      .col-md-10
-        .img-center{:title => "Default image"}
+          -# Имя изображения
+          .col-md-10
+            %h2.up{:title => "Image file name"}
+              #{@selected_image_name}
 
-    %img{:alt => "Default Image",
-         :src => 'assets/pictures/Poster_Episode_4.jpg',
-         :title => "Постер к эпизоду 4 \"Новая надежда\"",
-         :style => "width:50%; height:50%;" }
-      .image_user_value{:title => "Expert value"}
-      .col-md-1
-        .img-right-side
-          %h3{:title => "list to next image"}
-            %i.fa.fa-chevron-circle-right
+          -# Кнопка перелистывание вправо
+          .col-md-1
+            .img-right-side
+              %h3{:title => "list to next image"}
+                %i.fa.fa-arrow-circle-right
+
+          -# Изображение по-умолчанию
+          .col-md-12
+            .img-center{:title => "Default image"}
+              %img{:alt => "Default Image",
+                   :src => 'assets/pictures/Poster_Episode_4.jpg',
+                   :title => "Постер к эпизоду 4 \"Новая надежда\"",
+                   :style => "width:40%; height:40%;" }
+                .image_user_value{:title => "Expert value"}
+
 

@@ -1,0 +1,97 @@
+ru:
+  hello: "Привет, мир!"
+  header:
+    logo_title: "MyWeb на Ruby_on_Rails"
+    main: "Главная"
+    home: "Домой"
+    help: "Помощь"
+    sign_in: "Вход"
+    sign_out: "Выход"
+    person: "Я"
+    profile: "Мой профиль"
+    settings: "Настройки"
+
+  footer:
+    about: "О сайте"
+    contact: "Контакты"
+    dev_msg: "Сайт в разработке"
+
+  sessions:
+    new:
+      email: "Почта"
+      password: "Пароль"
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      new_user: "Новый пользователь"
+
+  users:
+    index:
+      listing: "Список пользователей"
+      name: "Имя"
+      email: "Почта"
+      edit: "Изменить"
+      show: "Показать"
+      destroy: "Удалить"
+      confirm_q: "Вы хотите удалить пользователя?"
+      new: "Новый пользователь"
+
+    form:
+      name: "Имя"
+      email: "E-mail"
+      password: "Пароль"
+      password_confirmation: "Подтверждение пароля"
+      create_account: "Применить"
+
+    new:
+      new_user_sign_up: "Регистрация нового пользователя"
+      back: "Назад"
+
+    show:
+      work: "Proceed to work"
+      email: "Email"
+
+  work:
+    index:
+      def_select_theme: "Выберите тему, чтобы оставить свой ответ"
+
+    button_theme_select:
+      select_theme_bt: "Выбрать тему"
+
+    button_list_results:
+      results_list: "Результаты"
+
+    choose_theme_from_arr:
+      select_theme: "Выбрать тему"
+
+    choose_theme:
+      select_theme: "Выбрать тему"
+
+    images:
+      common_value: "Средняя оценка"
+      total_values: "Всего оценок"
+
+      make_decision: "Выбрать оценку"
+      save_decision: "Сохранить оценку"
+
+      share_opinion: "Поделиться мнением"
+
+      # titles
+      theme_name: "Имя темы"
+
+    display_theme:
+      select_theme: "Выбрать тему"
+
+    results_list:
+      no_values: "По выбранной теме результаты отсутствуют..."
+      select_theme: "Выберите другую тему"
+      return_to_main: "Вернуться на главную страницу"
+
+      # titles
+      page_title: "Перейти к выбору темы"
+
+  main:
+    about:
+      about_title: "О сайте"
+
+    contacts:
+      contacts_title: "Контакты"

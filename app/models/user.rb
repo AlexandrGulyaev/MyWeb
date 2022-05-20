@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :values, dependent: :destroy
+
   before_save { self.email = email.downcase }
   # before_save { email.downcase! } # alternative
   before_create :create_remember_token
@@ -13,7 +14,6 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX }
 
   has_secure_password
-
   validates :password, length: { minimum: 6 }
 
   def User.new_remember_token

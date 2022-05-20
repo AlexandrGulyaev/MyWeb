@@ -288,7 +288,7 @@ DEPENDENCIES
   font-awesome-sass
   haml-rails (~> 2.0.1)
   jbuilder (~> 2.7)
-  jquery-ui-rails
+  jquery-ui-rails (~> 6.0.1)
   kaminari
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

@@ -6,6 +6,5 @@ class Image < ApplicationRecord
   }
   
   scope :find_image, -> (image_id) { find(image_id) }
-  
-  
+
 end

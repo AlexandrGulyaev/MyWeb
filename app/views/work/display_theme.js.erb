@@ -1,8 +1,10 @@
 // get data from controller
 var imageData = '<%= raw @image_data %>';
 console.log("IN display_theme: @image_data = " + imageData );
+
 var valuesQty = '<%= @image_data[:values_qty] %>';
 console.log("IN display_theme: valuesQty = " + valuesQty );
+
 $('.left_controls span.total_values h2.total').append().html(valuesQty);
 
 // show theme
@@ -12,7 +14,7 @@ if( selectedTheme == "Выберите тему для оценки" || selected
     $('.img-left-side').css({"display": "none"});
     $('.img-right-side').css({"display": "none"});
     $('.image .image_display .image_diag').css({"display": "none"});
-}else{
+} else {
     $('.img-left-side').css({"display": "block"});
     $('.img-right-side').css({"display": "block"});
     $('.image .image_display .image_diag').css({"display": "block"});
@@ -21,7 +23,8 @@ if( selectedTheme == "Выберите тему для оценки" || selected
 $('.image_display h2.up-theme').append().html(selectedTheme);
 
 //restore button
-$('.select_theme').empty().html("<%= j render 'work/button_theme_select' -%>");
+//$('.select_theme').empty().html("<%= j render 'work/button_theme_select' -%>");
+$('.select_theme').empty().html("< %= j render 'work/choose_theme_from_arr', locale: @current_locale -%>");
 
 // get data from controller
 var imageCurrentIndex = '<%= @image_data[:index] %>';
@@ -29,8 +32,10 @@ var imageCurrentIndex = '<%= @image_data[:index] %>';
 var oneImageName = '<%= @image_data[:name] %>';
 var oneImageFile = '<%= @image_data[:file] %>';
 console.log("3e IN display_theme: oneImageFile = " + oneImageFile);
+
 var oneImageId = '<%= @image_data[:image_id] %>';
 console.log("3f IN display_theme: oneImageId = " + oneImageId);
+
 var themeImagesSize = '<%= @image_data[:images_arr_size] %>';
 var selectedThemeId = '<%= @image_data[:theme_id] %>';
 
@@ -48,6 +53,25 @@ $(".img-center img").attr({alt: "Selected Image", src: pathImage, title: "Select
 $.ajax({
     type: "get",
     url: "api/next_image",
+    data: { index: imageCurrentIndex,
+        theme_id: selectedThemeId,
+        length: themeImagesSize },
+    dataType: 'json'
+}).done(function (data_return) {
+    console.log("success:  " + data_return.notice );
+    imageCurrentIndex = data_return.new_image_index;
+    oneImageName = data_return.name;
+    oneImageFile = data_return.file;
+    oneImageId = data_return.image_id;
+    $('.image_display h2.up').append().html(oneImageName);
+    var pathImage = "assets/pictures/" + oneImageFile;
+    $(".img-center").attr({title: "Selected image" });
+    $(".img-center img").attr({alt: "Selected Image", src:pathImage, title: "Selected image" });
+}).fail(function (data_return) { console.log("error: data_return = " + data_return);});
+
+$.ajax({
+    type: "get",
+    url: "api/prev_image",
     data: { index: imageCurrentIndex,
         theme_id: selectedThemeId,
         length: themeImagesSize },

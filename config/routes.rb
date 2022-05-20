@@ -28,9 +28,12 @@ Rails.application.routes.draw do
   match 'choose_image',     to: 'work#choose_image',      via: :get
   match 'choose_theme',     to: 'work#choose_theme',      via: :get
   match 'display_theme',    to: 'work#display_theme',     via: :post
+  #   Добавлено 05.09.22
+  match 'next_image',       to: 'work#next_image',        via: 'get'
+  match 'prev_image',       to: 'work#prev_image',        via: 'get'
 
   # users
-  match 'sign_in',           to: 'users#new',           via: 'get'
+  match 'sign_up',           to: 'users#new',           via: 'get'
 
   # sessions
   match 'sign_in',           to: 'sessions#new',           via: 'get'

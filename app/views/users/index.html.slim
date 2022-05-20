@@ -1,10 +1,10 @@
-h1 Listing users
+h1 = t('users.index.listing')
 
 table
   thead
     tr
-      th Name
-      th Email
+      th = t('users.index.name')
+      th = t('users.index.email')
       th
       th
       th
@@ -14,10 +14,10 @@ table
       tr
         td = user.name
         td = user.email
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to t('users.index.show'), user
+        td = link_to t('users.index.edit'), edit_user_path(user)
+        td = link_to t('users.index.destroy'), user, data: { confirm: t('users.index.confirm_q') }, method: :delete
 
 br
 
-= link_to 'New User', new_user_path
+= link_to t('users.index.new'), new_user_path
