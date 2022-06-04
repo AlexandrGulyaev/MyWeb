@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   match 'choose_image',     to: 'work#choose_image',      via: :get
   match 'choose_theme',     to: 'work#choose_theme',      via: :get
   match 'display_theme',    to: 'work#display_theme',     via: :post
+  match 'results_list',     to: 'work#results_list',      via: :get
+
   #   Добавлено 05.09.22
   match 'next_image',       to: 'work#next_image',        via: 'get'
   match 'prev_image',       to: 'work#prev_image',        via: 'get'
@@ -39,4 +41,10 @@ Rails.application.routes.draw do
   match 'sign_in',           to: 'sessions#new',           via: 'get'
   match 'sign_out',          to: 'sessions#destroy',       via: 'delete'
 
+
+  namespace :api, defaults: { format: :json } do
+    match 'next_image', to: 'api#next_image', via: :get
+    match 'prev_image', to: 'api#prev_image', via: :get
+    match 'save_value', to: 'api#save_value', via: :get
+  end
 end

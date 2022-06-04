@@ -21,5 +21,8 @@ module Myweb
     config.i18n.fallbacks = [:en]
 
     config.i18n.enforce_available_locales = true
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.assets.enabled = true
   end
 end

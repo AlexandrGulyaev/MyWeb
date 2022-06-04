@@ -80,10 +80,7 @@ group :development, :test do
   gem "binding_of_caller"
 end
 
-
-
-
-
-
-
-
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end

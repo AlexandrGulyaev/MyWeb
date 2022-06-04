@@ -8,18 +8,17 @@
 Image.delete_all
 Image.reset_pk_sequence
 Image.create([
-
-               {name: 'Постер к эпизоду 1 "Скрытая угроза"',     file: 'Poster_Episode_1.jpg', theme_id: 3},
-               {name: 'Постер к эпизоду 2 "Атака клонов"',       file: 'Poster_Episode_2.jpg', theme_id: 3},
-               {name: 'Постер к эпизоду 3 "Месть ситхов"',       file: 'Poster_Episode_3.jpg', theme_id: 3},
-               {name: 'Постер к эпизоду 4 "Новая надежда"',      file: 'Poster_Episode_4.jpg', theme_id: 2},
-               {name: 'Постер к эпизоду 5 "Империя наносит ответный удар"', file: 'Poster_Episode_5.jpg', theme_id: 2},
-               {name: 'Постер к эпизоду 6 "Возвращение джедая"', file: 'Poster_Episode_6.jpg', theme_id: 2},
-               {name: 'Постер к эпизоду 7 "Пробуждение силы"',   file: 'Poster_Episode_7.jpg', theme_id: 4},
-               {name: 'Постер к эпизоду 8 "Последний джедай"',   file: 'Poster_Episode_8.jpg', theme_id: 4},
-               {name: 'Постер к эпизоду 9 "Скайуокер. Восход"',  file: 'Poster_Episode_9.jpg', theme_id: 4},
-               {name: 'Постер к спин-оффу "Изгой-один"',         file: 'Poster_RogueOne.jpg',  theme_id: 5},
-               {name: 'Постер к спин-оффу "Соло"',               file: 'Poster_Solo.jpg',      theme_id: 5},
+               {name: 'Эпизод 1 "Скрытая угроза"',     file: 'Poster_Episode_1.jpg', theme_id: 3},
+               {name: 'Эпизод 2 "Атака клонов"',       file: 'Poster_Episode_2.jpg', theme_id: 3},
+               {name: 'Эпизод 3 "Месть ситхов"',       file: 'Poster_Episode_3.jpg', theme_id: 3},
+               {name: 'Эпизод 4 "Новая надежда"',      file: 'Poster_Episode_4.jpg', theme_id: 2},
+               {name: 'Эпизод 5 "Империя наносит ответный удар"', file: 'Poster_Episode_5.jpg', theme_id: 2},
+               {name: 'Эпизод 6 "Возвращение джедая"', file: 'Poster_Episode_6.jpg', theme_id: 2},
+               {name: 'Эпизод 7 "Пробуждение силы"',   file: 'Poster_Episode_7.jpg', theme_id: 4},
+               {name: 'Эпизод 8 "Последний джедай"',   file: 'Poster_Episode_8.jpg', theme_id: 4},
+               {name: 'Эпизод 9 "Скайуокер. Восход"',  file: 'Poster_Episode_9.jpg', theme_id: 4},
+               {name: 'Спин-офф "Изгой-один"',         file: 'Poster_RogueOne.jpg',  theme_id: 5},
+               {name: 'Спин-офф "Соло"',               file: 'Poster_Solo.jpg',      theme_id: 5},
              ])
 
 Theme.delete_all
